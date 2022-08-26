@@ -1,0 +1,45 @@
+
+.text-box{
+  font-family: 'Nanum Gothic Coding';
+
+   text-shadow: 2px 2px #0b0201;
+    width: 100%;
+    color:white;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    opacity: 1;
+    animation: fadeIn 1s;
+      
+   
+ }
+ 
+ .text-box p{
+    font-size: 2vw;
+    animation: fadeIn 1s;
+    
+   
+  
+  }
+  
+  .text-box h1{
+    font-size: 6vw;
+    margin: 10px 0 40px;
+    animation: fadeIn 1s;
+   
+
+    
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  

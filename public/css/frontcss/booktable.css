@@ -1,0 +1,50 @@
+
+.book-table{
+  /* background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.3) ),  ; */
+  background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.3) ), url('/images/background.jpg') ;
+  background-attachment: fixed;
+  background-size: cover;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+
+   
+   font-family: 'Nanum Gothic Coding';
+  
+
+
+  }
+  
+  .booktable-row{
+    padding-top: 3%;
+    display: inline-table;
+    text-align: center;
+    margin-bottom: 3%;
+   
+    
+  
+  }
+  
+  .booktable-row img {
+    width: 350px;
+    height: 300px;
+    border-radius: 10px;
+  }
+  
+  .booktable-row h1{
+    font-size: 30px;
+    color: rgb(206, 219, 231);
+    font-weight: 600;
+    font-family: 'Nanum Gothic Coding';
+  }
+  
+  .booktable-row p{
+    color: rgb(147, 156, 165);
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 20px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    font-family: 'Nanum Gothic Coding';
+  }
+  

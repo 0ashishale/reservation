@@ -1,0 +1,46 @@
+.footer {
+  
+    text-align: center;
+    padding: 30px 0;
+    background-image: url('/images/c.jpg');
+    color: aliceblue;
+    background-size: cover;
+   
+  }
+  
+  #address {
+    float: left;
+  
+    
+  }
+  
+  #phone{
+    float: right;
+
+  }
+  
+  .footer .icons{
+   margin: 10px 0 ;
+   
+    
+  }
+
+  
+ 
+  .fa-brands {
+    margin-right: 2em;
+   
+  }
+  
+  .info-bar{
+    
+    font-size: 25px;
+    font-weight: 600;
+    
+  
+  }
+  
+  #bholenath{
+    margin-top: 30px;
+    font-size: 13px;
+  }

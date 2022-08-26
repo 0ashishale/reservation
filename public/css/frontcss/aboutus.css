@@ -1,0 +1,128 @@
+.about-us{
+    
+width: 100%;
+ min-height: 100vh;
+  background-color:rgb(20, 35, 37);
+  background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.3) ), url('/images/a.jpg') ;
+  background-attachment: fixed;
+  background-size: cover;
+   
+}
+.title{
+
+    
+    
+    font-size: 5vh;
+    text-decoration: underline;
+    text-decoration-thickness:2px ;
+    font-family: 'Courier New, monospace';
+
+}
+.container{
+    width: 80%;
+    margin: auto;
+    display: block;
+    color: aliceblue;
+}
+
+.content{
+    padding-left: 15px;
+    float: left;
+    width: 50%;
+    word-spacing: 3px;
+}
+
+.content h4{
+    padding-top: 20px;
+}
+.content p{
+    padding-top: 20px;
+    margin-bottom: 35%;
+}
+
+
+.social{
+    width: 60%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    margin-left: 9%;
+    
+    
+}
+
+.social a{
+   
+    padding: 15px;
+    font-size: 15px;
+    color: rgb(69, 109, 145);
+   
+}
+
+.image-section{
+    float: right;
+    width: 30%;
+    display: block;
+}
+
+.image-section .address{
+    padding: 20px;
+}
+
+.image-content .address{
+    font-size: 3vh;
+    color: "white"; 
+  
+}
+.address .icon{
+    display: flex;
+}
+
+.hover-text{
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+  
+    /* Position the tooltip */
+    position: absolute;
+   
+  }
+  .icon:hover .hover-text{
+    visibility: visible;
+  }
+
+  .icon:hover #photo{
+    visibility: visible;
+  }
+
+
+
+
+ .image-content{
+    display: flex;
+   
+ }
+
+.club-name{
+ font-family: "Nanum Gothic Coding"; 
+ text-shadow: "2px 2px 5px white;"
+}
+
+@media  screen and (max-width:700px) {
+    #photo{
+        display: none;
+
+    }
+
+  .content p{
+    text-align: center;
+  }
+
+  .image-content{
+    display: block;
+  
+  }
+}

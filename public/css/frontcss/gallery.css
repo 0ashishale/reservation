@@ -1,0 +1,31 @@
+
+.gallery{
+  margin: 0;
+  align-items: center;
+  padding-bottom: 3%;
+  background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.3) ), url('/images/a.jpg') ;
+  background-size: cover;
+}
+.gallery.photos{
+  width: 100%;
+ min-height: 100vh;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ padding: 50px 08%; 
+
+
+}
+.gallery .container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 30px;
+ 
+
+}
+.gallery .container img{
+  width: 100%;
+  
+  
+}
+
