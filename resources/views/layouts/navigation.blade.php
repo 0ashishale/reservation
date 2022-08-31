@@ -16,10 +16,21 @@
                         {{ __('Dashboard') }}
                     </x-nav-link>
 
-                    @if(Auth::user()->is_Admin)
+                    @if(Auth::user()->is_Admin == '1' )
                     <x-nav-link :href="route('admin.index')" :active="request()->routeIs('admin.index')">
                         {{ __('Admin') }}
                     </x-nav-link>
+
+                    @elseif(Auth::user()->is_Admin == '2' )
+                    <x-nav-link :href="route('manager.index')" :active="request()->routeIs('admin.index')">
+                        {{ __('Manager') }}
+                    </x-nav-link>
+
+                    @elseif(Auth::user()->is_Admin == '3' )
+                    <x-nav-link :href="route('staff.index')" :active="request()->routeIs('admin.index')">
+                        {{ __('Staff') }}
+                    </x-nav-link>
+
                     @endif
                 </div>
             </div>
@@ -94,5 +105,9 @@
                 </form>
             </div>
         </div>
+
     </div>
+ 
 </nav>
+
+

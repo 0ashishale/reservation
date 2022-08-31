@@ -77,9 +77,26 @@
                 <li style="border:0.5px solid white; padding:3px 5px;">
                     <a href="/reservation"><i class="fa fa-paper-plane "></i> Reservation</a>
                 </li>
-                {{-- <li style="solid white; padding:3px 5px;">
-                    <a href="/login"><i class="fa fa-sign-in "></i> Login</a>
-                </li> --}}
+             <li style="solid white; padding:3px 5px;">
+
+                    @if (Route::has('login'))
+                <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
+                    @auth
+                        <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 underline" style="border:1px solid; padding:3px;">Dashboard</a>
+                    @else
+                        <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline" style="border:1px solid; padding:3px;" >Log in</a> 
+                       
+                        @if (Route::has('register'))
+                            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline"  style="border:1px solid; padding:3px;">Register</a>
+                        @endif
+                    @endauth
+                </div>
+             
+            @endif
+
+                </li> 
+                
+                
             </ul>
 
 

@@ -51,4 +51,23 @@ Route::middleware(['auth', 'admin'])
         Route::get('/reservation', [App\Http\Controllers\Admin\RouteController::class, 'reservation']);
         Route::get('/contact', [App\Http\Controllers\Admin\RouteController::class, 'contact']);
     });
+
+    Route::middleware(['auth', 'manager'])
+    ->prefix('manager')
+    ->name('managaer.')
+    ->group(function () {
+        Route::get('/', [App\Http\Controllers\Manager\ManagerController::class, 'index'])->name('index');
+        Route::get('/reservation', [App\Http\Controllers\Manager\RouteController::class, 'reservation']);
+        Route::get('/contact', [App\Http\Controllers\Manager\RouteController::class, 'contact']);
+
+    });
+
+    Route::middleware(['auth', 'staff'])
+    ->prefix('staff')
+    ->name('staff.')
+    ->group(function () {
+        Route::get('/', [App\Http\Controllers\Staff\StaffController::class, 'index'])->name('index');
+        Route::get('/reservation', [App\Http\Controllers\Staff\RouteController::class, 'reservation']);
+        Route::get('/contact', [App\Http\Controllers\Staff\RouteController::class, 'contact']);
+    });
 require __DIR__ . '/auth.php';

@@ -6,7 +6,8 @@ use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-class Admin
+
+class StaffMiddleware
 {
     /**
      * Handle an incoming request.
@@ -16,8 +17,8 @@ class Admin
      * @return \Illuminate\Http\Response|\Illuminate\Http\RedirectResponse
      */
     public function handle(Request $request, Closure $next)
-    { 
-        if(!Auth::check()|| !Auth::user()->is_Admin == '1')
+    {
+        if(!Auth::check()|| !Auth::user()->is_Admin == '3')
         {
             abort(403);
         }
