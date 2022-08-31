@@ -12,6 +12,10 @@
               <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 bg-white border-b border-gray-200">
+                @if(session('message'))
+    <div class="alert alert-success">{{session('message')}} </div>
+
+    @endif
                     <table style="border: 1px Solid">
                         <thead>
                             <tr style="border: 1px solid">
@@ -24,6 +28,7 @@
                                 <th style="border: 1px solid">Event</th>
                                 <th style="border: 1px solid">Email</th>
                                 <th style="border: 1px solid">Message</th>
+                                <th style="border: 1px solid">Action</th>
                                 
                               
                             </tr>
@@ -40,6 +45,11 @@
                                 <td style="border: 1px solid">{{$reservation->event}}</td>
                                 <td style="border: 1px solid">{{$reservation->email}}</td>
                                 <td style="border: 1px solid">{{$reservation->message}}</td>
+                                <td style="border: 1px solid">
+                                        <a href="">Edit</a>   
+                                        <a href="">Delete</a> 
+                                </td>
+
                             </tr>
                             @empty
                             <tr>

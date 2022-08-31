@@ -91,4 +91,15 @@ class FrontController extends Controller
 
         return redirect('/reservation')->with('message', 'Reservation Done Successfully');
     }
+
+    public function reservation_delete($reservation)
+    {
+        
+        $reservation = Reservation::findOrfailReservation($reservation);
+      
+
+        $reservation->delete();
+
+        return redirect('admin/reservation')->with('message', 'Reservation Deleted Successfully');
+    }
 }
