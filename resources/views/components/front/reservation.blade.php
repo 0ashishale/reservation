@@ -50,17 +50,17 @@
         </div>
        
         <div class="select__branch">
-                <span class="" style="color: aliceblue;">Select Branches:</span><br>
-                <input type="radio" name="branch" value="pokhara">  <h3 style="color: aliceblue;">Pokhara</h3> 
-                <input type="radio" name="branch" value="syangja"><h3 style="color: aliceblue;">Shyanja</h3> 
-                <input type="radio" name="branch" value="baglung"><h3 style="color: aliceblue;">Baglung</h3> <br><br>
+                <span class="" style="color: aliceblue;">Select Branches:</span><br> &nbsp; &nbsp; &nbsp; &nbsp;
+                <input type="radio" name="branch" value="pokhara">  <p>Pokhara</p> &nbsp; &nbsp; &nbsp; &nbsp;
+                <input type="radio" name="branch" value="syangja"><p>Shyanja</p>  &nbsp; &nbsp; &nbsp; &nbsp;
+                <input type="radio" name="branch" value="baglung"><p>Baglung</p> <br><br><br>
         </div>
         
         <div class="select__branch">
-          <span class="" style="color: aliceblue;">Select Event:</span><br>
-          <input type="radio" name="event" value="Non Stop Party">  <h3 style="color: aliceblue;">Non stop party</h3> 
-          <input type="radio" name="event" value="Special"><h3 style="color: aliceblue;">Special</h3> 
-          <input type="radio" name="event" value="Top Residence"><h3 style="color: aliceblue;">Top residence</h3> <br><br>
+          <span class="" style="color: aliceblue;">Select Event:</span><br> &nbsp; &nbsp; &nbsp; &nbsp;
+          <input type="radio" name="event" value="Non Stop Party">  <p>Non stop party</p>  &nbsp; &nbsp; &nbsp; &nbsp;
+          <input type="radio" name="event" value="Special"><p >Special</p>  &nbsp; &nbsp; &nbsp; &nbsp;
+          <input type="radio" name="event" value="Top Residence"><p >Top residence</p> <br><br>
   </div>
         <div>
           <button type="submit">SUBMIT<i class="fa fa-paper-plane"></i></button>

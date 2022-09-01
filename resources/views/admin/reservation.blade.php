@@ -13,22 +13,21 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 bg-white border-b border-gray-200">
                 @if(session('message'))
-    <div class="alert alert-success">{{session('message')}} </div>
-
-    @endif
-                    <table style="border: 1px Solid">
+                    <div class="alert alert-success">{{session('message')}} </div>
+                @endif
+                    <table >
                         <thead>
-                            <tr style="border: 1px solid">
-                                <th style="border: 1px solid">ID</th>
-                                <th style="border: 1px solid">Name</th>
-                                <th style="border: 1px solid">Phone No</th>
-                                <th style="border: 1px solid">No. Of People</th>
-                                <th style="border: 1px solid">Date</th>
-                                <th style="border: 1px solid">Branch</th>
-                                <th style="border: 1px solid">Event</th>
-                                <th style="border: 1px solid">Email</th>
-                                <th style="border: 1px solid">Message</th>
-                                <th style="border: 1px solid">Action</th>
+                            <tr>
+                                <th >ID</th>
+                                <th >Name</th>
+                                <th >Phone No</th>
+                                <th >No. Of People</th>
+                                <th >Date</th>
+                                <th >Branch</th>
+                                <th >Event</th>
+                                <th >Email</th>
+                                <th >Message</th>
+                                <th >Action</th>
                                 
                               
                             </tr>
@@ -36,17 +35,17 @@
                         <tbody>
                             @forelse($reservations as $reservation)
                             <tr>
-                                <td style="border: 1px solid">{{$reservation->id}}</td>
-                                <td style="border: 1px solid">{{$reservation->name}}</td>
-                                <td style="border: 1px solid">{{$reservation->phone_no}}</td>
-                                <td style="border: 1px solid">{{$reservation->num_of_people}}</td>
-                                <td style="border: 1px solid">{{$reservation->date}}</td>
-                                <td style="border: 1px solid">{{$reservation->branch}}</td>
-                                <td style="border: 1px solid">{{$reservation->event}}</td>
-                                <td style="border: 1px solid">{{$reservation->email}}</td>
-                                <td style="border: 1px solid">{{$reservation->message}}</td>
-                                <td style="border: 1px solid">
-                                        <a href="{{url('admin/reservation/'.$reservation->id.'/edit')}}">Edit</a>   
+                                <td >{{$reservation->id}}</td>
+                                <td >{{$reservation->name}}</td>
+                                <td >{{$reservation->phone_no}}</td>
+                                <td >{{$reservation->num_of_people}}</td>
+                                <td >{{$reservation->date}}</td>
+                                <td >{{$reservation->branch}}</td>
+                                <td >{{$reservation->event}}</td>
+                                <td >{{$reservation->email}}</td>
+                                <td >{{$reservation->message}}</td>
+                                <td >
+                                        <a href="{{url('admin/reservation/'.$reservation->id.'/edit')}}">Edit</a><br><br>   
                                         <a href="{{url('admin/reservation/'.$reservation->id.'/destroy')}}">Delete</a> 
                                 </td>
 
