@@ -1,4 +1,4 @@
-<x-admin-layout>
+<x-staff-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             {{ __('Dashboard') }}
@@ -16,19 +16,20 @@
     <div class="alert alert-success">{{session('message')}} </div>
 
     @endif
-                    <table style="border: 1px Solid">
+
+                    <h2> <b>Reservation Details:</h2> <b/><br/>
+                    <table style="border: 1px Solid" class="table">
                         <thead>
                             <tr style="border: 1px solid">
-                                <th style="border: 1px solid">ID</th>
+                          
                                 <th style="border: 1px solid">Name</th>
                                 <th style="border: 1px solid">Phone No</th>
                                 <th style="border: 1px solid">No. Of People</th>
                                 <th style="border: 1px solid">Date</th>
                                 <th style="border: 1px solid">Branch</th>
                                 <th style="border: 1px solid">Event</th>
-                                <th style="border: 1px solid">Email</th>
-                                <th style="border: 1px solid">Message</th>
-                                <th style="border: 1px solid">Action</th>
+                        
+                          
                                 
                               
                             </tr>
@@ -36,19 +37,15 @@
                         <tbody>
                             @forelse($reservations as $reservation)
                             <tr>
-                                <td style="border: 1px solid">{{$reservation->id}}</td>
+                              
                                 <td style="border: 1px solid">{{$reservation->name}}</td>
                                 <td style="border: 1px solid">{{$reservation->phone_no}}</td>
                                 <td style="border: 1px solid">{{$reservation->num_of_people}}</td>
                                 <td style="border: 1px solid">{{$reservation->date}}</td>
                                 <td style="border: 1px solid">{{$reservation->branch}}</td>
                                 <td style="border: 1px solid">{{$reservation->event}}</td>
-                                <td style="border: 1px solid">{{$reservation->email}}</td>
-                                <td style="border: 1px solid">{{$reservation->message}}</td>
-                                <td style="border: 1px solid">
-                                        <a href="{{url('admin/reservation/'.$reservation->id.'/edit')}}">Edit</a>   
-                                        <a href="{{url('admin/reservation/'.$reservation->id.'/destroy')}}">Delete</a> 
-                                </td>
+                           
+                             
 
                             </tr>
                             @empty
@@ -66,4 +63,4 @@
             </div>
         </div>
     </div>
-</x-admin-layout>
+</x-staff-layout>

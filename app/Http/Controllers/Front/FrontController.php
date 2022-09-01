@@ -61,7 +61,6 @@ class FrontController extends Controller
 
     public function contact_store(request $request)
     {
-       
         $contact = new Contact();
         $contact->name = $request['name'];
         $contact->phn_num = $request['phn_num'];
@@ -70,13 +69,11 @@ class FrontController extends Controller
 
         $contact->save();
 
-        return redirect('/contact')->with('Thank for your information');
+        return redirect('/contact')->with('message', 'Thank for your information');
     }
- 
 
     public function reservation_store(request $request)
     {
-        
         $reservation = new Reservation();
         $reservation->name = $request->name;
         $reservation->phone_no = $request->phone_no;
@@ -92,14 +89,36 @@ class FrontController extends Controller
         return redirect('/reservation')->with('message', 'Reservation Done Successfully');
     }
 
-    public function reservation_delete($reservation)
+    public function reservation_delete(int $reservation_id)
     {
-        
-        $reservation = Reservation::findOrfailReservation($reservation);
-      
+       
+        $reservation = Reservation::findOrfail($reservation_id);
 
         $reservation->delete();
 
-        return redirect('admin/reservation')->with('message', 'Reservation Deleted Successfully');
+        return redirect('admin/reservation/')->with('message', 'Reservation Deleted Successfully');
     }
+
+    public function reservation_edit(Reservation $reservation){
+            return view('admin.edit', compact('reservation'));
+    }
+
+    public function reservation_update(request $request)
+    {
+        $reservation = Reservation::findOrfail($request->id);
+        
+        $reservation->name = $request->name;
+        $reservation->phone_no = $request->phone_no;
+        $reservation->email = $request->email;
+        $reservation->message = $request->message;
+        $reservation->date = $request->date;
+        $reservation->num_of_people = $request->num_of_people;
+        $reservation->branch = $request->branch;
+        $reservation->event = $request->event;
+
+        $reservation->save();
+
+        return redirect('admin/reservation')->with('message', 'Reservation Updated Successfully');
+    }
+
 }

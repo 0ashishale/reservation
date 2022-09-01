@@ -50,19 +50,21 @@ Route::middleware(['auth', 'admin'])
         Route::get('/', [App\Http\Controllers\Admin\AdminController::class, 'index'])->name('index');
         Route::get('/reservation', [App\Http\Controllers\Admin\RouteController::class, 'reservation']);
         Route::get('/contact', [App\Http\Controllers\Admin\RouteController::class, 'contact']);
+        Route::get('/reservation/{reservation}/destroy', [App\Http\Controllers\Front\FrontController::class, 'reservation_delete'])->name('distroy');
+        Route::get('/reservation/{reservation}/edit', [App\Http\Controllers\Front\FrontController::class, 'reservation_edit'])->name('edit');
+        Route::post('/reservation/{id}', [App\Http\Controllers\Front\FrontController::class, 'reservation_update'])->name('update');
     });
 
-    Route::middleware(['auth', 'manager'])
+Route::middleware(['auth', 'manager'])
     ->prefix('manager')
-    ->name('managaer.')
+    ->name('manager.')
     ->group(function () {
         Route::get('/', [App\Http\Controllers\Manager\ManagerController::class, 'index'])->name('index');
         Route::get('/reservation', [App\Http\Controllers\Manager\RouteController::class, 'reservation']);
         Route::get('/contact', [App\Http\Controllers\Manager\RouteController::class, 'contact']);
-
     });
 
-    Route::middleware(['auth', 'staff'])
+Route::middleware(['auth', 'staff'])
     ->prefix('staff')
     ->name('staff.')
     ->group(function () {

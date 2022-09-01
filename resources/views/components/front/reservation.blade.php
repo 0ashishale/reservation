@@ -12,6 +12,10 @@
           <h4>RESERVATION<h4>
         </a></b>
     </div>
+            @if(session('message'))
+    <div class="alert alert-success">{{session('message')}} </div>
+
+    @endif
     <form action="{{url('/reservation')}}" method="POST" >
       @csrf
       <div data-aos="zoom-in-up" data-aos-duration="1000">
