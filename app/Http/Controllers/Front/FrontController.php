@@ -121,4 +121,15 @@ class FrontController extends Controller
         return redirect('admin/reservation')->with('message', 'Reservation Updated Successfully');
     }
 
+
+    public function contact_delete(int $contact_id)
+    {
+       
+        $contact = Contact::findOrfail($contact_id);
+
+        $contact->delete();
+
+        return redirect('admin/contact/')->with('message', 'Contact Deleted Successfully');
+    }
+
 }
