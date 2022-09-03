@@ -9,7 +9,7 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 bg-white border-b border-gray-200">
-                    <form action="{{ url('admin/reservation/'.$reservation->id) }}" method="POST" style="background-color:rgb(117, 87, 145); width:800px; padding:30px;">
+                    <form action="{{ url('admin/reservation/'.$reservation->id) }}" method="POST" style="background-color:black; width:800px; padding:30px;">
                         @csrf
                         <div data-aos="zoom-in-up" data-aos-duration="1000">
                             <div class="row1">
@@ -38,31 +38,31 @@
                             </div>
 
                             <div class="input-group">
-                                <textarea id="message" rows="8" name="message"   required  style="color:rgb(12, 11, 11) ">{{$reservation->message}}</textarea>
+                                <textarea id="message" rows="8" name="message"   required  style="color:white; background-color:black; ">{{$reservation->message}}</textarea>
                                 <label for="message" style="color:rgb(197, 180, 180) "><i class="fa fa-comments-o"></i>Your Message</label>
                             </div>
 
                             <div class="select__branch">
                                 <span class="" style="color: aliceblue;">Select Branches:</span><br>
                                 <input type="radio" name="branch" value="pokhara" required>
-                                <h3 style="color: aliceblue;">Pokhara</h3>
+                                <p style="color: aliceblue;">Pokhara</p>
                                 <input type="radio" name="branch" value="syangja" required>
-                                <h3 style="color: aliceblue;">Shyanja</h3>
+                                <p style="color: aliceblue;">Shyanja</p>
                                 <input type="radio" name="branch" value="baglung" required>
-                                <h3 style="color: aliceblue;">Baglung</h3> <br><br>
+                                <p style="color: aliceblue;">Baglung</p> <br><br>
                             </div>
 
                             <div class="select__branch">
                                 <span class="" style="color: aliceblue;">Select Event:</span><br>
                                 <input type="radio" name="event" value="Non Stop Party" required>
-                                <h3 style="color: aliceblue;">Non stop party</h3>
+                                <p style="color: aliceblue;">Non stop party</p>
                                 <input type="radio" name="event" value="Special" required>
-                                <h3 style="color: aliceblue;">Special</h3>
+                                <p style="color: aliceblue;">Special</p>
                                 <input type="radio" name="event" value="Top Residence" required>
-                                <h3 style="color: aliceblue;">Top residence</h3> <br><br>
+                                <p style="color: aliceblue;">Top residence</p> <br><br>
                             </div>
                             <div>
-                                <button type="submit">UPDATE<i class="fa fa-paper-plane"></i></button>
+                                <button  style="color:white; type="submit">UPDATE<i class="fa fa-paper-plane"></i></button>
                             </div>
                         </div>
                     </form> 

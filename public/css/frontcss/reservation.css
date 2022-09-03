@@ -30,6 +30,8 @@
 
 .select__branch p{
     margin: 12px;
+    cursor: pointer;
+    
 }
 .select__branch span{
     margin: 12px;

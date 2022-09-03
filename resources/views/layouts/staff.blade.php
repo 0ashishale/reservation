@@ -7,6 +7,7 @@
 
         <title>{{ config('app.name', 'Laravel') }}</title>
         <link rel="stylesheet" href="{{ asset('css/frontcss/reservation.css') }}">
+        <link rel="stylesheet" href="{{ asset('backendcss/allback.css') }}">
         
 
         <!-- Fonts -->
